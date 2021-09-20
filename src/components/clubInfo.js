@@ -1,5 +1,8 @@
 //Club Information
-
+//-Club Name
+//-Users/Participants List
+//Join to club button
+//Information About Club
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
@@ -159,7 +162,9 @@ export default function ClubInfo() {
   return (
     <div>
       <Card className={classes.root}>
+        {/*Image */}
         <CardHeader
+        
           avatar={
             <Avatar
               aria-label="recipe"
@@ -184,21 +189,25 @@ export default function ClubInfo() {
         
         />
         <CardContent>
+            {/*Skills List */}
           <Typography variant="body2" color="textSecondary" component="p">
             <b>What Skills you can Gain-</b>
             <br></br>
             {skills.toString()}
           </Typography>
+            {/*Club Description */}
           <Typography variant="body2" color="textSecondary" component="p">
             <b>Club Discription</b>
             <br></br>
             {club_data.description}
           </Typography>
+            {/*Queries Solved */}
           <Typography variant="body2" color="textSecondary" component="p">
             <b>Queries solved</b>
             <br></br>
             {club_data.solved_questions}
           </Typography>
+            {/*Participats count */}
           <Typography variant="body2" color="textSecondary" component="p">
             <b>Participants</b>
             <Badge
@@ -209,7 +218,7 @@ export default function ClubInfo() {
             ></Badge>
           </Typography>
         </CardContent>
-
+  {/*Participants list */}
         <List className={classes.root2}>
           {subscribers.map((subscriber) => {
             return (
@@ -247,7 +256,7 @@ export default function ClubInfo() {
             );
           })}
         </List>
-
+  {/*Join club button */}
         <CardActions disableSpacing style={{ display: "flex" }}>
           <Button
             variant="contained"
@@ -288,6 +297,7 @@ export default function ClubInfo() {
           </p>
         </CardActions>
       </Card>
+        {/*Toast after successfully joined club */}
       <Snackbar open={openAlert} autoHideDuration={6000} onClose={handleCloseAlert}>
         <Alert onClose={handleCloseAlert} severity="success">
           Successfully joined to the group

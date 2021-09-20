@@ -1,3 +1,11 @@
+//Home page -IMPORTANT PAGE
+//Stores User Data
+//Login Authentication
+/*
+Merging All components
+Routing for SPA
+Navigation
+ */
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';

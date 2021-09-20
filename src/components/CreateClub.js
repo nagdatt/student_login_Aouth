@@ -1,3 +1,10 @@
+//Creating a club by user
+//Getting data from user
+//-Club Name
+//-Club icon
+//Club Information
+//Club Skills
+
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
