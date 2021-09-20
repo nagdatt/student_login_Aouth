@@ -1,10 +1,5 @@
 
-{/*Not USABLE NOW */}
-{/*Not USABLE NOW */}
-{/*Not USABLE NOW */}
-{/*Not USABLE NOW */}
-{/*Not USABLE NOW */}
-{/*Not USABLE NOW */}
+//Complete User Profile
 
 
 import {

@@ -1,6 +1,5 @@
 //Home page -IMPORTANT PAGE
-//Stores User Data
-//Login Authentication
+//Accepts Incoming One-to-one Call
 /*
 Merging All components
 Routing for SPA
@@ -54,7 +53,7 @@ export default function HomePage(props) {
     Photo_url: props.userData.photoURL,
     UID: props.userData.uid,
   };
-
+// Handling video calls
   useEffect(() => {
     const liveMeetingSnapshot = db
       .collection('liveMeeting')
@@ -76,6 +75,7 @@ export default function HomePage(props) {
 
   return (
     <div className={classes.root}>
+      {/* Router with navigation */}
       <Router>
         <AppBar position="sticky">
           <Toolbar>
