@@ -1,3 +1,8 @@
+
+//All Public clubs where user can join from here
+
+
+//Import Statements
 import React from "react";
 import { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
@@ -26,7 +31,7 @@ import { Link } from "react-router-dom";
 import LinearProgress from '@material-ui/core/LinearProgress';
 import {changeHeaderText} from '../Redux/Actions/allActions';
 import { useDispatch } from "react-redux";
-
+//CSS
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -58,6 +63,8 @@ const styles = (theme) => ({
     color: theme.palette.grey[500],
   },
 });
+
+//Pop-Up Dialog
 const DialogTitle = withStyles(styles)((props) => {
   const { children, classes, onClose, ...other } = props;
   return (
@@ -106,6 +113,10 @@ const DialogActions = withStyles((theme) => ({
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="right" ref={ref} {...props} />;
 });
+
+
+
+//Function for displaying all club cards
 export default function AllClubCards(props) {
   const dispatch=useDispatch();
   dispatch(changeHeaderText("All Clubs"));
@@ -147,11 +158,7 @@ export default function AllClubCards(props) {
 
   }, []);
   const uploadForm=()=>{
-   // console.log(club_name);
-  //  console.log(getskills);
-  //  console.log(club_desc);
-  //  console.log(file.name);
-  //  console.log(firebaseData)
+  
     const uploadTask=storage.ref(`images/${file.name}`).put(file);
     uploadTask.on(
       "state_changed",
@@ -207,7 +214,7 @@ export default function AllClubCards(props) {
    
   }
   const handleOpenDialog = () => {
-    //alert("Hello")
+   
     setDialogOpen(true);
   };
   return (

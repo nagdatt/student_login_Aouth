@@ -1,3 +1,7 @@
+//-Bottom Drawer
+//-Used to update user Data
+//Feilds- like user name, Email, phone No., Skills Etc.
+
 import React from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
@@ -30,7 +34,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function BottomDrawer({ userData }) {
-  //console.log(userData);
   const classes = useStyles();
   const [MainuserData, setuserData] = React.useState(userData);
   const [skills, setSkills] = React.useState([]);

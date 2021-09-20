@@ -1,4 +1,4 @@
-
+//Reducer for changing user data
 const chageUserData=(state=[],action)=>{
     console.log('change user Data')
     console.log(action)
